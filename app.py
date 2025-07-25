@@ -552,3 +552,13 @@ def get_hazard_symbol(bahaya):
         return "☢️"  # Simbol biohazard / toksik
     else:
         return "❓"
+def assign_ghs_symbol(hazard_level):
+    if hazard_level == "High":
+        return "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/GHS-pictogram-skull.svg/240px-GHS-pictogram-skull.svg.png"
+    elif hazard_level == "Medium":
+        return "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/GHS-pictogram-exclam.svg/240px-GHS-pictogram-exclam.svg.png"
+    else:
+        return "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/GHS-pictogram-non-flammable.svg/240px-GHS-pictogram-non-flammable.svg.png"
+
+# Tambahkan kolom ke DataFrame
+df["GHS Symbol"] = df["Hazard Level"].apply(assign_ghs_symbol)
