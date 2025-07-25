@@ -560,5 +560,3 @@ def assign_ghs_symbol(hazard_level):
     else:
         return "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/GHS-pictogram-non-flammable.svg/240px-GHS-pictogram-non-flammable.svg.png"
 
-# Tambahkan kolom ke DataFrame
-df["GHS Symbol"] = df["Hazard Level"].apply(assign_ghs_symbol)
